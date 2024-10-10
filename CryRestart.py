@@ -9,7 +9,7 @@ class RestartDocker(object):
 
     def is_err_in_get_lastest_log(self):
         #print("Hello world")
-        cmd = "docker logs crynux_node -n 1"
+        cmd = "docker logs crynux_node -n 2"
         args = shlex.split(cmd)
         rs = subprocess.Popen(args,stdout = subprocess.PIPE , stderr = subprocess.PIPE)
         ouput,err = rs.communicate()
