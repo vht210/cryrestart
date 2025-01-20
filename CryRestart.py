@@ -14,7 +14,7 @@ class RestartDocker(object):
         rs = subprocess.Popen(args,stdout = subprocess.PIPE , stderr = subprocess.PIPE)
         ouput,err = rs.communicate()
         print(err)
-        if(str(err).find("ERROR")>-1) or (str(err).find("error")> -1) or (str(err).find("Error")> -1) or (str(err).find("kicked")> -1) or (str(err).find("TransactionNotFound")> -1) or (str(err).find("BlockNotFound")> -1):
+        if(str(err).find("ERROR")>-1) or (str(err).find("error")> -1) or (str(err).find("Error")> -1) or (str(err).find("kicked")> -1) or (str(err).find("TransactionNotFound")> -1) or (str(err).find("BlockNotFound")> -1) or (str(err).find("node manager is stopped")> -1) :
             return True
         return False
 
